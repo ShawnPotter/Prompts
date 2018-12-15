@@ -1,5 +1,11 @@
+# Shawn Potter
+# 12/15/2018
+# passgen.py
+# simple password generator
+
 import random
 
+#initial interface
 def interface():
     print("Welcome to Password Generator!")
     
@@ -27,6 +33,7 @@ def interface():
     
     generator(passLength, specialChar)
 
+#generate the password
 def generator(length, special):
     if special == "y":
         charList = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
@@ -36,6 +43,7 @@ def generator(length, special):
     print("Password: " + password)
     tryAgain(length, special)
 
+#create function to ask if the user wants to generate another password
 def tryAgain(length, special):
     again = str(input("Do you want to generate another password? (Y/N): "))
     again = again.lower()
@@ -43,4 +51,6 @@ def tryAgain(length, special):
         generator(length, special)
     else:
         print("Thanks for using Password Generator!")
+
+#execute        
 interface()
