@@ -1,0 +1,60 @@
+<!--
+Shawn Potter
+12/15/2018
+rgbtohex.html
+rgb converter to hex color codes.
+-->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>RGB To Hex Converter</title>
+    <style>
+        body{
+            width: 50%;
+            margin:auto;
+        }
+        #colorOutput{
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+        }
+        .input{
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width:125px;
+        }
+        .label{
+            padding-right: 10px;
+            float: left;
+        }
+        input{
+            float:right;
+        }
+    </style>
+</head>
+<body>
+    <h1>RGB To Hex Converter</h1>
+    <p>Input the values and press the button</p>
+    <div>
+        <div class="input">
+            <label class="label">Red</label><input type="text" id="decRed" maxlength="3" size="3"><br>
+        </div>
+        <div class="input">
+            <label class="label">Green</label><input type="text" id="decGreen" maxlength="3" size="3"><br>
+        </div>
+        <div class="input">
+            <label class="label">Blue</label><input type="text" id="decBlue" maxlength="3" size="3"><br>
+        </div>
+        <button id="submit">Submit</button>
+    </div>
+    <div id="output">
+        <div id="codeOutput"></div><br>
+        <label>Color Preview<div id="colorOutput"></div></label>
+    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
