@@ -1,0 +1,95 @@
+<!--
+Shawn Potter
+12/29/2018
+EVE Online Mining Calculator webpage
+index.html
+-->
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>EVE Online - Mining Calculator</title>
+    <link href="stylesheet.css" rel="stylesheet">
+</head>
+<body>
+<div>
+    <div class="dropdown">
+        <h2>Character Skills</h2>
+        <label>Mining:</label>
+        <select id="mining">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select><br>
+        <label>Astrogeology:</label>
+        <select id="astrogeology">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select><br>
+        <label>Mining Frigate:</label>
+        <select id="miningFrigate">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select><br>
+        <label>Expedition Frigate:</label>
+        <select id="expeditionFrigate">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select><br>
+        <label>Mining Barge:</label>
+        <select id="miningBarge">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select><br>
+        <label>Exhumer:</label>
+        <select id="exhumer">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+        </select>
+    </div>
+    <div class="dropdown">
+        <h2>Choose Ship</h2>
+        <label>Ships:</label>
+        <select id="ship">
+            <option value="venture">Venture</option>
+        </select><br>
+    </div>
+    <div class="dropdown">
+        <h2>Choose Mining Module</h2>
+        <label>Module:</label>
+        <select id="module">
+            <option value="miner1">Miner I</option>
+        </select><br>
+    </div>
+    <div class="dropdown">
+        <h2>Choose Ore</h2>
+        <label>Ore:</label>
+        <select id="ore">
+            <option value="veldspar">Veldspar</option>
+        </select><br>
+    </div>
+    <br>
+    <button id="submit">Submit</button>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
