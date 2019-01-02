@@ -6,21 +6,21 @@
 
 //set globals
 var submit = document.getElementById("submit");
-var miningSkill = 0;
-var astrogeologySkill = 0;
-var miningFrigateSkill = 0;
-var miningBargeSkill = 0;
-var expeditionFrigateSkill = 0;
-var exhumerSkill = 0;
-var ship = "";
-var module = "";
-var ore = "";
 
 //button executes getData
 submit.onclick = getData;
 
 //getData executes four getters
 function getData(){
+    var miningSkill = 0;
+    var astrogeologySkill = 0;
+    var miningFrigateSkill = 0;
+    var miningBargeSkill = 0;
+    var expeditionFrigateSkill = 0;
+    var exhumerSkill = 0;
+    var ship = "";
+    var module = "";
+    var ore = "";
     getSkills();
     getShip();
     getModule();
