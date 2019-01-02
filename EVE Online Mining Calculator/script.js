@@ -6,25 +6,28 @@
 
 //set globals
 var submit = document.getElementById("submit");
+var miningSkill = 0;
+var astrogeologySkill = 0;
+var miningFrigateSkill = 0;
+var miningBargeSkill = 0;
+var expeditionFrigateSkill = 0;
+var exhumerSkill = 0;
+var ship = "";
+var module = "";
+var ore = "";
 
 //button executes getData
 submit.onclick = getData;
 
-//getData executes four getters
+//getData executes four getters and returns variables needed.
 function getData(){
-    var miningSkill = 0;
-    var astrogeologySkill = 0;
-    var miningFrigateSkill = 0;
-    var miningBargeSkill = 0;
-    var expeditionFrigateSkill = 0;
-    var exhumerSkill = 0;
-    var ship = "";
-    var module = "";
-    var ore = "";
     getSkills();
     getShip();
     getModule();
     getOre();
+    getOutput(miningSkill, astrogeologySkill, miningFrigateSkill,
+             miningBargeSkill,expeditionFrigateSkill,
+             exhumerSkill,ship,module,ore);
     
     //debug
     console.log("miningSkill="+ miningSkill +
@@ -32,7 +35,7 @@ function getData(){
                 ", miningFrigateSkill="+ miningFrigateSkill +
                 ", miningBargeSkill="+ miningBargeSkill +
                 ", expeditionFrigateSkill="+ expeditionFrigateSkill +
-                ", exhumerSkill"+ exhumerSkill +
+                ", exhumerSkill="+ exhumerSkill +
                 ", ship="+ ship +
                 ", module="+ module +
                 ", ore="+ ore);
