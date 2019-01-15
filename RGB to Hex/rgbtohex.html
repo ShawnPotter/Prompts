@@ -21,7 +21,12 @@ rgb converter to hex color codes.
             height: 50px;
             border: 1px solid black;
         }
-        .input{
+        #colorOutput2{
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+        }
+        .input,.output{
             padding-top: 2px;
             padding-bottom: 2px;
             width:125px;
@@ -30,7 +35,7 @@ rgb converter to hex color codes.
             padding-right: 10px;
             float: left;
         }
-        input{
+        .rgb{
             float:right;
         }
     </style>
@@ -40,19 +45,28 @@ rgb converter to hex color codes.
     <p>Input the values and press the button</p>
     <div>
         <div class="input">
-            <label class="label">Red</label><input type="text" id="decRed" maxlength="3" size="3"><br>
+            <label class="label">Red</label><input class="rgb" type="number" id="decRed" min="0" max="255" maxlength="3" size="3"><br>
+            <label class="label">Green</label><input class="rgb" type="number" id="decGreen" min="0" max="255" maxlength="3" size="3"><br>
+            <label class="label">Blue</label><input class="rgb" type="number" id="decBlue" min="0" max="255" maxlength="3" size="3"><br>
         </div>
-        <div class="input">
-            <label class="label">Green</label><input type="text" id="decGreen" maxlength="3" size="3"><br>
-        </div>
-        <div class="input">
-            <label class="label">Blue</label><input type="text" id="decBlue" maxlength="3" size="3"><br>
-        </div>
-        <button id="submit">Submit</button>
+        <button id="submitRgb">Submit</button>
     </div>
-    <div id="output">
-        <div id="codeOutput"></div><br>
-        <label>Color Preview<div id="colorOutput"></div></label>
+    <div>
+        <br>
+        <label>Hex Code: <input type="text" id="codeOutput" readonly></label><br>
+        <label class="preview">Preview<div id="colorOutput"></div></label>
+    </div>
+    <h1>Hex to RGB Converter</h1>
+    <p>Input the hex value (without the "#") and press the button</p>
+    <div class="input">
+        <label>Hex Code: <input type="text" id="hexInput" maxlength="6"></label>
+    </div>
+    <button id="submitHex">Submit</button>
+    <div class="output">
+        <label class="label">Red</label><input class="rgb" type="text" id="hexRed" maxlength="3" size="3" readonly><br>
+        <label class="label">Green</label><input class="rgb" type="text" id="hexGreen" maxlength="3" size="3" readonly><br>
+        <label class="label">Blue</label><input class="rgb" type="text" id="hexBlue" maxlength="3" size="3" readonly><br>
+        <label class="preview">Preview<div id="colorOutput2"></div></label>
     </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="scripts/script.js"></script>
