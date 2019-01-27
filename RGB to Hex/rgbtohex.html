@@ -3,6 +3,9 @@ Shawn Potter
 12/15/2018
 rgbtohex.html
 rgb converter to hex color codes.
+TODO:
+    - Add color hex code output for color picker
+    - Add functionality for RGB input boxes to update sliders
 -->
 
 <!DOCTYPE html>
@@ -16,12 +19,7 @@ rgb converter to hex color codes.
             width: 50%;
             margin:auto;
         }
-        #colorOutput{
-            width: 50px;
-            height: 50px;
-            border: 1px solid black;
-        }
-        #colorOutput2{
+        #colorOutput, #colorOutput2, #colorOutput3{
             width: 50px;
             height: 50px;
             border: 1px solid black;
@@ -30,6 +28,11 @@ rgb converter to hex color codes.
             padding-top: 2px;
             padding-bottom: 2px;
             width:125px;
+        }
+        .sliderContainer{
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width:250px;
         }
         .label{
             padding-right: 10px;
@@ -68,7 +71,27 @@ rgb converter to hex color codes.
         <label class="label">Blue</label><input class="rgb" type="text" id="hexBlue" maxlength="3" size="3" readonly><br>
         <label class="preview">Preview<div id="colorOutput2"></div></label>
     </div>
+    <br>
+    <div id="colorSlider">
+        <h1>Color Picker</h1>
+        <p>Use the sliders to close a color, the preview image will auto-update.</p>
+        <div class="sliderContainer">
+            <label class="label">Red</label><br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="redSlider">
+            <input class="rgb" type="text" id="redSliderNum" maxlength="3" size="3" readonly><br>
+            <label class="label">Green</label><br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="greenSlider">
+            <input class="rgb" type="text" id="greenSliderNum" maxlength="3" size="3" readonly><br>
+            <label class="label">Blue</label><br>
+            <input type="range" min="0" max="255" value="0" class="slider" id="blueSlider">
+            <input class="rgb" type="text" id="blueSliderNum" maxlength="3" size="3" readonly>
+        </div>
+        <div class="output">
+            <label class="preview">Preview<div id="colorOutput3"></div></label>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/slider.js"></script>
 </body>
 </html>

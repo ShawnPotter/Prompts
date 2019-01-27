@@ -4,7 +4,7 @@
  * script.js
  * RGB to hex code converter
  * TODO:
- *   - Create Hex to RGB converter
+ * - nothing
 */
 
 function setDefaults(){
